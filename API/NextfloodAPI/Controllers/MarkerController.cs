@@ -39,7 +39,7 @@ namespace NextfloodAPI.Controllers
         }
 
         [HttpPost("AddMarkerPoint")]
-        public async Task<int> AddMarkerPoint([FromForm] MarkerPoint markerPoint)
+        public async Task<int> AddMarkerPoint(MarkerPoint markerPoint)
         {
             return await markerPointServices.AddNewMarkerPoint(markerPoint);
         }
@@ -51,7 +51,7 @@ namespace NextfloodAPI.Controllers
         }
 
         [HttpPut("UpdateMarkerPointByID")]
-        public async Task<int> UpdateMarkerPointByID([FromForm] MarkerPoint markerPoint)
+        public async Task<int> UpdateMarkerPointByID(MarkerPoint markerPoint)
         {
             return await markerPointServices.UpdateMarkerPointByID(markerPoint);
         }
